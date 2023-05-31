@@ -1,11 +1,19 @@
-type ElmentsJSX = {
-  children: React.ReactElement;
-};
+import planets from '../data/planets';
+import PlanetCard from './PlanetCard';
+import Title from './Title';
 
-function SolarSystem({ children }:ElmentsJSX) {
+function SolarSystem() {
   return (
     <div data-testid="solar-system">
-      { children }
+      <Title headline="Planetas" />
+      { planets
+        .map((planet) => (
+          <PlanetCard
+            key={ planet.name }
+            planetName={ planet.name }
+            planetImage={ planet.image }
+          />
+        ))}
     </div>
   );
 }
