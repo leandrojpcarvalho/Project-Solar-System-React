@@ -1,6 +1,6 @@
 type ElmentsJSX = {
   children: React.ReactElement;
-}
+};
 
 function SolarSystem({ children }:ElmentsJSX) {
   return (

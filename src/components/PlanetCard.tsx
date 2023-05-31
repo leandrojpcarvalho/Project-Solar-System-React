@@ -1,7 +1,7 @@
 type Planet = {
   planetName:string;
   planetImage:string;
-}
+};
 
 function PlanetCard({ planetName, planetImage }:Planet) {
   return (
