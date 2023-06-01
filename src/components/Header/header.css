@@ -1,0 +1,44 @@
+#ring {
+  border: 4px solid white;
+  border-radius: 100%;
+  position: relative;
+  width: 160px;
+  height: 340px;
+  left: 270px;
+  top: 190px;
+  
+  transform: matrix(0.6, 0.8, -0.84, 0.54, 0, 0);
+}
+
+header {
+  position: absolute;
+  top: -200px;
+  width: 625px;
+  z-index: -2;
+  margin: 0 auto;
+}
+
+.test {
+  display: flex;
+  margin: 0 auto;
+}
+
+header .test p {
+  position: absolute;
+  text-align: center;
+  z-index: 0;
+  line-height: 35px;
+  width: 450px;
+  background-color: black;
+}
+
+header .test span {
+  position: absolute;
+  z-index: -3;
+}
+
+header h1 {
+  font-size: 80px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
+}

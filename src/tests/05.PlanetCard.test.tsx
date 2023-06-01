@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import PlanetCard from '../components/PlanetCard';
+import PlanetCard from '../components/SolarSystem/PlanetCard';
 
 describe('5 - Crie um componente chamado `PlanetCard`', () => {
   it('Será validado se o componente `<PlanetCard />` é renderizado', () => {

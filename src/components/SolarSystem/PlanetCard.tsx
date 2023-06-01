@@ -5,10 +5,10 @@ type Planet = {
 
 function PlanetCard({ planetName, planetImage }:Planet) {
   return (
-    <div data-testid="planet-card">
-      <p data-testid="planet-name">{ planetName }</p>
+    <ul data-testid="planet-card" className="container ul">
       <img src={ planetImage } alt={ `Planeta ${planetName}` } />
-    </div>
+      <li data-testid="planet-name">{ planetName }</li>
+    </ul>
   );
 }
 

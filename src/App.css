@@ -1,3 +1,36 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-image: url('./images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul, li {
+  list-style: none;
+  text-decoration: none;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h2 {
+  font-size: 60px;
+  margin-bottom: 14px;
 }

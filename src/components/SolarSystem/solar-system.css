@@ -1,0 +1,48 @@
+.container.solar-system h2 {
+  margin-top: 440px;
+}
+
+.planets {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1284px;
+  margin: 0 auto;
+}
+
+.ul {
+    display: flex;
+    width: 200px;
+    margin: 0 20px;
+
+    list-style: none;
+    font-size: 40px;
+}
+
+.planets :nth-child(1) img {
+    transform: scale(.1);
+}
+
+.planets :nth-child(2) img {
+    transform: scale(.2125);
+}
+
+.planets :nth-child(3) img {
+    transform: scale(.22084);
+}
+
+.planets :nth-child(4) img {
+    transform: scale(.1375);
+}
+.planets :nth-child(5) img {
+  transform: scale(.56667);
+}
+.planets :nth-child(6) img {
+    transform: scale(.5875);
+}
+.planets :nth-child(7) img {
+    transform: scale(.3);
+}
+.planets :nth-child(8) img {
+    transform: scale(.3);
+}
