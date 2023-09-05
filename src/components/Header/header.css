@@ -27,8 +27,8 @@ header .test p {
   position: absolute;
   text-align: center;
   z-index: 0;
-  line-height: 35px;
-  width: 450px;
+  line-height: 46px;
+  width: 435px;
   background-color: black;
 }
 

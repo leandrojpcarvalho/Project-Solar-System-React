@@ -5,7 +5,7 @@ function Header() {
     <header>
       <div id="ring"> </div>
       <h1>
-        <div className='test'>
+        <div className="test">
           <p>
             Sistema S
             <span> olar</span>

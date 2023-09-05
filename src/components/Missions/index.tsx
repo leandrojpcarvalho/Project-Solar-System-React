@@ -3,25 +3,31 @@ import Title from '../Title';
 import missions from '../../data/missions';
 import './mission.css';
 
-function Missions() {
+type Props = {
+  planet:string;
+};
+
+function Missions({ planet, setMissions }:Props) {
   return (
-    <section data-testid="container missions" className="container missions">
-      <Title headline="Missões" />
+    <div data-testid="missions">
       <section className="container missions">
-        {missions.map((mission) => {
-          const { name, year, country, destination } = mission;
-          return (
-            <MissionCard
-              key={ name }
-              name={ name }
-              year={ year }
-              country={ country }
-              destination={ destination }
-            />
-          );
-        })}
+        <Title headline={ `Missões enviadas a ${planet}` } />
+        <div className="container missions">
+          {missions.filter((mission) => mission.destination === planet).map((mission) => {
+            const { name, year, country, destination } = mission;
+            return (
+              <MissionCard
+                key={ name }
+                name={ name }
+                year={ year }
+                country={ country }
+                destination={ destination }
+              />
+            );
+          })}
+        </div>
       </section>
-    </section>
+    </div>
   );
 }
 

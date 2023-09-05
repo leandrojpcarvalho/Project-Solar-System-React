@@ -1,3 +1,7 @@
+:root{
+    --scale: 1.8;
+}
+
 .container.solar-system h2 {
   margin-top: 440px;
 }
@@ -8,6 +12,17 @@
   align-items: center;
   max-width: 1284px;
   margin: 0 auto;
+  transition-timing-function: ease;
+}
+
+.planet-to-earth{
+    position: relative;
+    border: 1px dashed white;
+    border-bottom: none;
+    top: 172px;
+    left: 120px;
+    width: 241px;
+    height: 100px;
 }
 
 .ul {
@@ -18,31 +33,98 @@
     list-style: none;
     font-size: 40px;
 }
+/* 
+@keyframes uptodown {
+    from {top: 100px; rotate: 0 0 1 0deg;}
+    to {top: 0px; rotate: 0 0 1 30deg;}
+} */
+
+
+@keyframes onTrack {
+    0% {top:180px;; left: 580px;}
+    25% {bottom: 400px; left: 580px; transform:rotate(-38deg) scale(.6);}
+    26% {bottom: 400px; left: 580px; transform:rotate(45deg) scale(.7);}
+    75% {bottom: 400px; left: 820px; transform:rotate(45deg) scale(.9);}
+    76% {bottom: 400px; left: 820px; transform:rotate(-38deg) scale(.7);}
+    100% {bottom: 275px; left: 815px; transform:rotate(-38deg) scale(.6);}
+}
+
+.container.ul img.rocket{
+    width: 100px;
+    position: relative;
+    transform:rotate(-38deg) scale(.5);
+    z-index: -1;
+    top:180px;
+    transition-timing-function: cubic-bezier(0,1.14,.39,1.31);
+    animation: onTrack 5s 1 linear forwards ;
+}
+
+.rocket::before{
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+
+.animation{
+    position: relative;
+    transition-timing-function: ease-in-out;
+    animation: uptodown 2s 4 alternate-reverse;
+    rotate: 0 0 0 deg;
+}
+
+.planets :nth-child(n):hover {
+    cursor: pointer;
+
+}
+
+.planets :nth-child(n):hover img {
+    animation: none;
+    transform: scale(.5)
+}
 
 .planets :nth-child(1) img {
-    transform: scale(.1);
+    transform: scale(calc(.1/var(--scale)));
+    animation-duration: 2s;
 }
 
 .planets :nth-child(2) img {
-    transform: scale(.2125);
+    transform: scale(calc(.2125/var(--scale)));
+    animation-delay: 0.25s;
+}
+
+.planets :nth-child(2):hover {
+    cursor: pointer;
 }
 
 .planets :nth-child(3) img {
-    transform: scale(.22084);
+    transform: scale(calc(.22084/var(--scale)));
+    animation-delay: 0.5s;
 }
 
 .planets :nth-child(4) img {
-    transform: scale(.1375);
+    transform: scale(calc(.1375/var(--scale)));
+    animation-delay: 0.75s;
 }
 .planets :nth-child(5) img {
-  transform: scale(.56667);
+  transform: scale(calc(.56667/var(--scale)));
+  animation-delay: 1s;
 }
 .planets :nth-child(6) img {
-    transform: scale(.5875);
+    transform: scale(calc(.5875/var(--scale)));
+    animation-delay: 1.25s;
 }
 .planets :nth-child(7) img {
-    transform: scale(.3);
+    transform: scale(calc(.3/var(--scale)));
+    animation-delay: 1.75s;
 }
 .planets :nth-child(8) img {
-    transform: scale(.3);
+    transform: scale(calc(.3/var(--scale)));
+    animation-delay: 2s;
 }

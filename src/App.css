@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  /* text-transform: uppercase; */
+  text-align: justify;
 }
 
 body {
@@ -25,12 +27,12 @@ ul, li {
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 
 .container h2 {
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 14px;
 }
